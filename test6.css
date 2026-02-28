@@ -1,0 +1,116 @@
+:root {
+    --qc-blue: #003399;
+    --qc-white: #ffffff;
+    --qc-gray: #f4f4f4;
+    --accent: #e31837;
+    --success-green: #d4edda;
+    --success-text: #155724;
+    --error-red: #f8d7da;
+    --error-text: #721c24;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--qc-gray);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--qc-blue);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--accent);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.question {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.question h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options label {
+    display: block;
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.options label:hover {
+    border-color: var(--qc-blue);
+    background-color: #f0f4ff;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    background: var(--qc-blue);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.correct-ans {
+    background-color: var(--success-green);
+    color: var(--success-text);
+    border: 2px solid #c3e6cb;
+}
+
+.wrong-ans {
+    background-color: var(--error-red);
+    color: var(--error-text);
+    border: 2px solid #f5c6cb;
+}

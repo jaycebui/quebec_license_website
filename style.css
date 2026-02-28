@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* --- STATIC SIDE MENU --- */
+.static-menu {
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    background: #003399; /* Quebec Blue */
+    color: white;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.menu-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.static-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.static-menu ul li {
+    margin: 25px 0;
+}
+
+.static-menu ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.static-menu ul li a:hover {
+    color: white;
+}
+
+/* --- MAIN CONTENT --- */
+.content {
+    margin-left: 240px; /* Space for static menu */
+    padding: 60px;
+    width: calc(100% - 240px);
+}
+
+.floating-header {
+    margin-bottom: 50px;
+}
+
+.floating-header h1 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin: 0;
+}
+
+.floating-header p {
+    color: #718096;
+    font-size: 1.2rem;
+}
+
+/* --- FLOATING CARDS --- */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.chapter-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.chapter-card:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.chapter-num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #003399;
+    margin-right: 25px;
+    opacity: 0.8;
+}
+
+.chapter-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2d3748;
+}
+
+.chapter-info p {
+    margin: 5px 0 0 0;
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+/* Floating Animation */
+.float-anim {
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
